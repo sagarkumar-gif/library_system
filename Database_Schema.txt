@@ -1,0 +1,28 @@
+Database Schema for Libaray system(Management) 
+
+CREATE DATABASE `book_data` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+
+CREATE TABLE `book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `b_name` varchar(45) DEFAULT NULL,
+  `isAvailable` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `book_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `stud_id` int(11) DEFAULT NULL,
+  `b_id` int(11) DEFAULT NULL,
+  `isIssue` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `student` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `class` varchar(45) DEFAULT NULL,
+  `isActive` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+

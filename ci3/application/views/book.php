@@ -69,7 +69,6 @@
         book_data();
 
         function show_book() {
-            alert('<?php echo base_url('index.php/product/book_data') ?>');
             $.ajax({
                 type: 'ajax',
                 url: '<?php echo base_url('index.php/Bookcontroller/book_data') ?>',

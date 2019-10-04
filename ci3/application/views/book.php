@@ -157,7 +157,7 @@
                     if (data == 0) {
                         alert('Book is available...!');
                     } else {
-                        alert('Book already issued...!');
+                        alert('This book is not avilable..!');
                     }
                 }
 
@@ -176,7 +176,7 @@
                 data: {book_id: book_id, stud_id: stud_id},
                 success: function (data) {
                     if (data == false) {
-                        alert('This book is not avilable..');
+                        alert('Book already issued...!');
                     } else {
                         alert("book issued succesfully");
                     }

@@ -18,7 +18,7 @@ class Bookcontroller extends CI_Controller{
         $data=$this->product_model->book_list();
         echo json_encode($data);
     }
-    
+    //method one -> Return Book
     function return_book(){
         $data=$this->product_model->returnbook();
         echo json_encode($data);
@@ -32,12 +32,12 @@ class Bookcontroller extends CI_Controller{
          $data=$this->product_model->book_list2();
          echo json_encode($data);
     }
-    
+    //method Two -> Check Book availability
     function book_available(){
          $data=$this->product_model->check_book();
          echo json_encode($data);
     }
-    
+    //method Three -> Issue Book from library
     function book_issue(){
         $data=$this->product_model->issue_book();
         echo json_encode($data);

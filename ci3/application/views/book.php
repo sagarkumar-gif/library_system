@@ -60,7 +60,7 @@
     </body>
 </html>
  <!--Jquery CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <!--Jquery CDN -->
 <script>
     $(document).ready(function () {
@@ -69,9 +69,10 @@
         book_data();
 
         function show_book() {
+            alert('<?php echo base_url('index.php/product/book_data') ?>');
             $.ajax({
                 type: 'ajax',
-                url: '<?php echo site_url('product/book_data') ?>',
+                url: '<?php echo base_url('index.php/Bookcontroller/book_data') ?>',
                 async: true,
                 dataType: 'json',
                 success: function (data) {
@@ -97,7 +98,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "<?php echo site_url('product/return_book') ?>",
+                url: "<?php echo base_url('index.php/Bookcontroller/return_book') ?>",
                 dataType: "JSON",
                 data: {product_code: product_code},
                 success: function (data) {
@@ -111,7 +112,7 @@
         function stud_data() {
             $.ajax({
                 type: 'ajax',
-                url: '<?php echo site_url('product/student_data') ?>',
+                url: '<?php echo base_url('index.php/Bookcontroller/student_data') ?>',
                 async: true,
                 dataType: 'json',
                 success: function (data) {
@@ -128,7 +129,7 @@
         function book_data() {
             $.ajax({
                 type: 'ajax',
-                url: '<?php echo site_url('product/book_data2') ?>',
+                url: '<?php echo base_url('index.php/Bookcontroller/book_data2') ?>',
                 async: true,
                 dataType: 'json',
                 success: function (data) {
@@ -150,7 +151,7 @@
             $.ajax({
                 type: 'ajax',
                 type: "POST",
-                        url: '<?php echo site_url('product/book_available') ?>',
+                        url: '<?php echo base_url('index.php/Bookcontroller/book_available') ?>',
                 dataType: "JSON",
                 data: {book_id: book_id},
                 success: function (data) {
@@ -171,7 +172,7 @@
             $.ajax({
                 type: 'ajax',
                 type: "POST",
-                        url: '<?php echo site_url('product/book_issue') ?>',
+                        url: '<?php echo base_url('index.php/Bookcontroller/book_issue') ?>',
                 dataType: "JSON",
                 data: {book_id: book_id, stud_id: stud_id},
                 success: function (data) {

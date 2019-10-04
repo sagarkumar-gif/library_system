@@ -101,7 +101,7 @@
                 dataType: "JSON",
                 data: {product_code: product_code},
                 success: function (data) {
-                    alert('book returned successfully...');
+                    alert('This book has been returned successfully.');
                     show_book();
                 }
             });
@@ -155,7 +155,7 @@
                 data: {book_id: book_id},
                 success: function (data) {
                     if (data == 0) {
-                        alert('Book is available...!');
+                        alert('Book available...!');
                     } else {
                         alert('This book is not avilable..!');
                     }
